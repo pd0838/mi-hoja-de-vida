@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Hoja de Vida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #808080; /* Fondo gris */
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .header-card {
+            background-color: #444;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 16px;
+            border: 3px solid #777;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-top: 20px;
+            background-color: #3a3a3a;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        .section:hover {
+            border-color: rgba(173, 216, 230, 0.8); /* Azul claro desvanecido */
+        }
+        .section h2 {
+            margin: 10px;
+            cursor: pointer;
+        }
+        .section-content {
+            padding: 15px;
+            display: none;
+        }
+        .contact-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .contact-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".section").forEach(section => {
+                let hasExpanded = false;
+                section.addEventListener("mouseenter", function() {
+                    if (!hasExpanded) {
+                        this.querySelector(".section-content").style.display = "block";
+                        hasExpanded = true;
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header-card">Mi Hoja de Vida</div>
+        
+        <div class="section">
+            <h2>Información Personal</h2>
+            <div class="section-content">
+                <p><strong>Nombre:</strong> Obed Paez Vergel</p>
+                <p><strong>Correo:</strong> obed0838@gmail.com</p>
+                <p><strong>Teléfono:</strong> 3134633577</p>
+                <p><strong>Ubicación:</strong> Ocaña, Norte de Santander</p>
+                <p>Me considero una persona apasionada por la tecnología y el aprendizaje continuo. Me encanta explorar nuevos sistemas y soluciones informáticas para mejorar mi conocimiento y desempeño profesional.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Experiencia Laboral</h2>
+            <div class="section-content">
+                <p><strong>Técnico en Reparaciones de Software y Hardware</strong> - Zeus Soluciones NDS (Actualidad)</p>
+                <p>Actualmente trabajo en Zeus Soluciones NDS, donde me desempeño como técnico en reparaciones de software y hardware. Me especializo en la detección y resolución de fallos en sistemas operativos, recuperación de datos, mantenimiento preventivo y correctivo de equipos, así como la implementación de soluciones optimizadas para mejorar el rendimiento de los dispositivos tecnológicos.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Educación</h2>
+            <div class="section-content">
+                <p><strong>Bachiller Académico</strong> - Colegio Carlos Julio Torrado Peñaranda</p>
+                <p><strong>Técnico en Sistemas</strong> - SENA</p>
+                <p><strong>Tecnólogo en Sistemas</strong> - SENA</p>
+                <p>Durante mis estudios adquirí habilidades fundamentales en administración de redes, desarrollo de software, mantenimiento de equipos y gestión de bases de datos. Además, tuve la oportunidad de trabajar en proyectos que me permitieron mejorar mis capacidades analíticas y técnicas en el campo de la informática.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Habilidades</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Manejo avanzado de sistemas operativos (Windows, Linux). Me especializo en configuraciones avanzadas, optimización de rendimiento y resolución de problemas en distintos entornos.</li>
+                    <li>Programación en Python. Desarrollo scripts y aplicaciones para automatizar procesos, analizar datos y mejorar la eficiencia en diversas tareas.</li>
+                    <li>Reparación y mantenimiento de hardware. Diagnóstico y solución de problemas en equipos de cómputo, reemplazo de componentes y optimización de sistemas.</li>
+                    <li>Seguridad informática. Conocimientos en detección de vulnerabilidades, configuración de firewalls, análisis de amenazas y buenas prácticas para garantizar la seguridad de los datos.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <a href="tel:3134633577" class="contact-button">📞</a>
+</body>
+</html>
